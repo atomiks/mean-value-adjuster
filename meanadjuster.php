@@ -1,3 +1,5 @@
+<?php
+
 class MeanAdjuster {
 
   private $ratings;
