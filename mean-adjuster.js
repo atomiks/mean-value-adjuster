@@ -16,7 +16,7 @@ class MeanAdjuster {
         const mean = this.getTrueMean();
         const variability = [];
         this.values.forEach((rating) => variability.push(Math.pow(rating - mean, 2)));
-        let sum = variability.reduce((sum, value) => sum + value);
+        const sum = variability.reduce((sum, value) => sum + value);
         return Math.sqrt(sum / this.values.length);
     }
 
