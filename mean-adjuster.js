@@ -23,14 +23,14 @@ class MeanAdjuster {
     _applyWeightingFunction()  {
         const mean = this.getTrueMean();
         const sd = this.getStandardDeviation();
-        const ratingWeights = [];
+        const valueWeights = [];
         this.values.forEach(rating => {
             const zScore = sd !== 0 ? (rating - mean) / sd : 0;
             let weight = Math.sin(zScore + Math.PI / 2);
             if (weight < 0) weight = 0;
-            ratingWeights.push({rating: rating, weight: weight});
+            valueWeights.push({rating: rating, weight: weight});
         });
-        return ratingWeights;
+        return valueWeights;
     }
 
     _calculateAdjustedMean() {
