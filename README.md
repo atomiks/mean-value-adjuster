@@ -14,17 +14,17 @@ The class is given an array of values:
 JavaScript:
 
 ```javascript
-const values = [100,70,88,91,85,60,99,2]; // "2" is very far from the most values and the mean
+const values = [100,70,88,91,85,60,99,2]; // 2 is far from most values and the mean
 const adjuster = new MeanAdjuster(values);
-adjuster.getTrueMean(); // 74.4
-adjuster.getAdjustedMean(); // 83.4
+adjuster.getTrueMean(); // ≈74.4
+adjuster.getAdjustedMean(); // ≈83.4
 ```
 
 PHP:
 
 ```php
-$values = [10,9,7,1]; // "1" is far from the mean and considered a troll vote
+$values = [100,70,88,91,85,60,99,2];
 $adjuster = new MeanAdjuster($values);
-$adjuster->getTrueMean(); // ≈ 6.8
-$adjuster->getAdjustedMean(); // ≈ 8.4
+$adjuster->getTrueMean(); // ≈74.4
+$adjuster->getAdjustedMean(); // ≈83.4
 ```
