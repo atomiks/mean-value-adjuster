@@ -1,7 +1,7 @@
 class MeanAdjuster {
     constructor(values) {
         this.values = values;
-        if (!values || values.constructor !== Array){
+        if (!values || values.constructor !== Array || !values.length){
             console.warn('The class needs an array of numbers. Using default of [0]');
             this.values = [0];
         }
